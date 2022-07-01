@@ -1,0 +1,24 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Liste d&apos;&eacute;l&egrave;ves
+header
+  nav
+    h1 Liste d&apos;&eacute;l&egrave;ves
+main
+  .container
+- const { name,birth } = students
+     for item in students
+            ul
+              li= item.name + " " + item.birth 
+                form(action="/users" method='POST')
+                  button#button(type='submit' name='button' value=item.name onclick="refreshPage()") X
+script.
+  
+  function refreshPage(){
+  
+  } 
+a(href='/') Page d'acceuil
+
